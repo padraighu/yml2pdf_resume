@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="{{ info.name }} Resume">
+	<meta name="author" content="{{ info.name }}">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+
+	<title>{{ info.name }} Resume</title>
+</head>
+<body>
+	<h1 id="title">{{ info.name }}</h1>
+	<div id="contact">Tel: {{ info.phone }} | Email: {{ info.email }}</div>
+	<div id="address">{{ info.address }}</div>
+	<div id="personal-website"><a class="link" href="https://{{ info.website }}" target="_blank">{{ info.website }}</a></div>
+	
+	<p>
+		<div class="section-header"><strong>EDUCATION</strong></div>
+		<hr>
+		<table>
+			<tr style="font-weight: bold;">
+				<td><div class="left-col half-col">{{ education.school }}<div></td>
+				<td><div class="right-col half-col">{{ education.location }}</div></td>
+			</tr>
+			<tr style="font-style: italic;">
+				<td><div class="left-col half-col">{{ education.degree }}</div></td>
+				<td><div class="right-col half-col">{{ education.dates }}</div></td>
+			</tr>
+			<tr>
+				<td><div class="left-col half-col">&nbsp;&nbsp;&nbsp;&nbsp;GPA - {{ education.gpa }}</div></td>
+			</tr>
+		</table>
+		<strong>Coursework: </strong>
+		{% for course in education.courses -%}
+			{{ course }}{{ '.' if loop.last else ', ' }} 
+		{%- endfor %}
+	</p>
+	
+	<p>
+		<div class="section-header"><strong>EXPERIENCE</strong></div>
+		<hr>
+		{% for exp in experience %} 
+			<table>
+				<tr style="font-weight: bold;">
+					<td><div class="left-col half-col">{{ exp.org }}</div></td>
+					<td><div class="right-col half-col">{{ exp.location }}</div></td>
+				</tr>
+				<tr style="font-style: italic;">
+					<td><div class="left-col half-col">{{ exp.position }}</div></td>
+					<td><div class="right-col half-col">{{ exp.dates }}</div></td>
+				</tr>
+			</table>
+			<ul>
+				{% for desp in exp.descriptions %}
+					<li>{{ desp }}</li>
+				{% endfor %}
+			</ul>
+		{% endfor %}
+	</p>
+	
+	<p>
+		<div class="section-header"><strong>PROJECTS</strong></div>
+		{% for project in projects %}
+			<hr>
+			<p>
+				<strong>{{ project.title }}</strong> <a class="link" href="{{ project.link }}" target="_blank">({{ project.link }})</a>
+				<ul>
+					{% for desp in project.descriptions %}
+						<li>{{ desp }}</li>
+					{% endfor %}
+				</ul>
+			</p>
+		{% endfor %}
+	</p>
+
+	<p>
+		<div class="section-header"><strong>COMPUTING SKILLS</strong></div>
+		<hr>
+		<table>
+			<tr>
+				<td class="skill-col-left"><strong>Languages</strong></td>
+				<td class="skill-col-right">
+					{% for lan in skills.languages -%}
+						{{ lan }}{{ '' if loop.last else ', ' }}
+					{%- endfor %}
+				</td>
+			</tr>
+			<tr>
+				<td class="skill-col-left"><strong>Tools</strong></td>
+				<td class="skill-col-right">
+					{% for tool in skills.tools -%}
+						{{ tool }}{{ '' if loop.last else ', ' }}
+					{%- endfor %}
+				</td>
+			</tr>
+		</table>
+	</p>
+</body>
+</html>

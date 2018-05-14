@@ -1,0 +1,63 @@
+#title, #contact, #address, #personal-website
+{
+	text-align: center;
+}
+
+*
+{
+	font-family: Georgia;
+	line-height: 150%;
+}
+
+.link
+{
+	text-decoration: none;
+	color: black;
+	font-family: Courier;
+}
+
+.link-intext
+{	
+	color: black;
+	font-family: Courier;
+}
+
+.left-col 
+{
+	text-align: left;
+}
+
+.right-col
+{
+	text-align: right;
+}
+
+
+#header
+{
+	letter-spacing: 2px;
+}
+
+td
+{
+	width: 50%;
+}
+
+.skill-col-left
+{
+	width: 25%;
+}
+
+.skill-col-right
+{
+	width: 75%;
+}
+
+/*table, th, td {
+	border: 1px solid black;
+}*/
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}

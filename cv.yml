@@ -1,0 +1,69 @@
+info:
+  name: Harry J. Potter
+  phone: (781) 452-4077
+  email: harry.potter@hogwarts.edu
+  address: 4 Privet Drive, Little Whinging, Surrey, England
+  website: www.pottermore.com
+
+education:
+  school: Hogwarts School of Witchcraft and Wizardry
+  location: Scotland
+  degree: Bachelor of Wizardry
+  dates: 1991 - 1997
+  gpa: 3.5
+  courses:
+    - Defence Against the Dark Arts
+    - Charms
+    - Potions
+    - Care of Magical Creatures
+    - Transfiguration
+    - Astronomy
+    - Divination
+    - Herbology
+
+experience:
+  - org: Auror Department, Ministry of Magic
+    location: United Kingdom
+    position: Head
+    dates: 2007 - Present
+    descriptions:
+      - >-
+        Dark wizard catcher
+  - org: Auror Department, Ministry of Magic
+    location: United Kingdom
+    position: Auror
+    dates: 1997 - 2007
+    descriptions:
+      - >-
+        See above
+  - org: Dumbledore's Army
+    location: Hogwarts
+    position: Co-founder and Instructor
+    dates: 1995-1997
+    descriptions:
+      - >-
+        Instructed fellow students on how to fight Voldemort and Death Eaters
+  - org: Gryffindor Quidditch team
+    location: Hogwarts
+    position: Seeker
+    dates: 1991-1997
+    descriptions:
+      - >-
+        Weasley is Our King
+
+projects:
+  - title: 1994 Triwizard Tournament
+    link: https://www.pottermore.com/features/triwizard-tournament-retrospective
+    descriptions:
+      - >-
+        Represented Hogwarts in the Tournament and became the winner
+      - >-
+        Fought revived Voldemort in the process
+
+skills:
+  languages:
+    - Parseltongue
+  tools:
+    - Invisibility Cloak
+    - Marauder's Map
+    - Firebolt
