@@ -3,7 +3,7 @@ PDF_FILE = HPotter_cv.pdf
 
 all: cv.html $(PDF_FILE)
 
-cv.html: cv.yml cv_template.html script.py
+cv.html: cv.yml cv_template.html style.css script.py
 	python script.py
 
 $(PDF_FILE): cv.html
